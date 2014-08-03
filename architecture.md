@@ -1,10 +1,14 @@
-Users
-* Generated from FB login
+User
++ Generated from FB login
 
-Trips
+Trip
++ has_many requests
 * start_date
 * end_date
 * destination
 
-Requests
+Request
++ belongs_to trip
++ has_one requester
++ has_one host
 * status (awaiting_requester_approval, awaiting_host_approval)
