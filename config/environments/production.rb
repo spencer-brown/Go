@@ -81,5 +81,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  onfig.action_mailer.default_url_options = { host: 'smev.heroku.com' }
+  config.action_mailer.default_url_options = { host: 'lodgeapp.heroku.com' }
 end
