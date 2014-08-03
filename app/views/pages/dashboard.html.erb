@@ -7,11 +7,11 @@
   <ul>
     <% @users.each do |user| %>
       <li>
-        <%= user.email %></li>
-      <%= link_to 'Send Request', requests_path(host_id: user), method: :post %>
-    </li>
-  <% end %>
-</ul>
+        <%= user.email %>
+        <%= link_to 'Send Request', requests_path(host_id: user), method: :post %>
+      </li>
+    <% end %>
+  </ul>
 
   <h2>Requests as user</h2>
   <% @user_requests.each do |request| %>
