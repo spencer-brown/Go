@@ -10,4 +10,11 @@ class RequestsController < ApplicationController
       redirect_to root_url
     end
   end
+
+  def destroy
+    @request = current_user.requests.find(params[:id])
+    @request.destroy
+    flash[:notice] = 'Request deleted'
+    redirect_to root_path
+  end
 end
