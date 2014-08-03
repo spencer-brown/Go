@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
       user.access_token = auth.credentials.token
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
+      user.location = auth.extra.raw_info.location.name unless auth.extra.raw_info.location.nil?
     end
   end
 end

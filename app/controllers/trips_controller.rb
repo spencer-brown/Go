@@ -67,6 +67,13 @@ class TripsController < ApplicationController
       @trip = Trip.find(params[:id])
     end
 
+    def generate_requests(destination)
+      graph = Koala::Facebook::API.new(current_user.access_token)
+      location = graph.get_object('me')['location']
+
+      friends = @graph.get_connections('me', 'friends')
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def trip_params
       params.require(:trip).permit(:destination, :start_date, :end_date)
