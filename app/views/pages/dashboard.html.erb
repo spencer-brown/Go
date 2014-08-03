@@ -1,1 +1,5 @@
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<% if current_user.nil? %>
+  <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+<% else %>
+  <%= current_user.email %>
+<% end %>
