@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'better_errors'
+gem 'koala'
+gem 'byebug'
 
 group :development do
   gem 'spring'
