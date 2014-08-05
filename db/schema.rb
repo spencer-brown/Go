@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140803191823) do
+ActiveRecord::Schema.define(version: 20140803203159) do
 
   create_table "requests", force: true do |t|
     t.integer  "user_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140803191823) do
     t.string   "destination"
     t.string   "start_date"
     t.string   "end_date"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

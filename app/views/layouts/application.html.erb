@@ -5,6 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <script>
+    var _roost = _roost || [];
+    _roost.push(['appkey','7bf8560ecee0487cbf9b1bb6c70136ad']);
+
+    !function(d,s,id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+        js=d.createElement(s); js.id=id;
+        js.src='//cdn.goroost.com/js/roost.js';
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document, 'script', 'roost-js');
+  </script>
 </head>
 <body>
 <p class='notice'><%= notice %></p>

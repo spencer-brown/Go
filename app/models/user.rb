@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
     :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :requests
+  has_many :trips
   has_many :hosts, through: :requests
 
   def self.from_omniauth(auth)
